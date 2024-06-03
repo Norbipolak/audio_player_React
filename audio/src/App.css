@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+}
+
+.audio-player {
+  max-width: 500px;
+  height: auto; 
+  /*
+  ha nem adunk meg itt height-ot, akkor olyan magas lesz, mint a benne lévő elemeknek a magassága block-level elemeknek pl. div, p, h1
+  ha be van állítva az hogy height: auto, akkor ahhoz hasonlóa, mint ha nem lenne megadva height kiszámolja, hogy mennyi a magassága a 
+  benne lévő elemeknek, de viszont ha a parent elem az egy flex vagy egy grid, akkor jobb a height: auto de összeségében nagyon hasonlóak!!! 
+  */
+  background-color: #5a9ad2;
+  border: 1px solid #4d83b3;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 0px 0px 4px black;
+  /*
+  ha pl. itt kettő van megadva az x meg az y-tengelyen, hogy mennyire menjen ki az elem mögöl, jelen esetben itt nem fog elmenni, mert 
+  x és az y-tengelyen is 0px van megadva!!! de ezek az értékek lehetnek akár minuszosak is, hasonló, mint amikor van egy parent elemünk, ami 
+  position: relative és van egy gyerek, ami position: relative és ott be lehet állítani, hogy top, bottom, right, left!!! 
+  
+  ha van 3. paraméter mint pl. itt 
+  akkor a 3-dik paraméter az a blur, tehát, hogy mekkora legyen a blur!! 
+  
+  4 paraméter itt, hogy milyen színű legyen a shadow!!! 
+
+  ha negativ paraméterek vannak megadva, akkor
+  ->
+  alapesetben ha pozítiv van megadva, akkor az első, tehét az x-tengelyen jobbra fogja kitólni 
+  a második paraméter meg a y-tengelyre vontakozik és ilyenkor alapból lefele megy tehát below 
+  -> 
+  ha negatívok vannak megadva akkor az x-tengelyen balra fog mozdulni a shadow az y-tengelyen meg felfelé, tehát top 
+
+  és lehet egy negyedik pxeles paramétert is megadni, ami meg a spread lesz -> box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+  meg fontos, hogy lehet olyat is megadni, hogy inset és akkor a shadow az nem a box körött lesz, hanem befelé!!!! 
+  de az a alapbeállítás, hogy outer-box, tehát a box-on kivül lesz a shadow!! 
+  */
+  border-radius: 15px;
+  text-align: center;
+
+}
